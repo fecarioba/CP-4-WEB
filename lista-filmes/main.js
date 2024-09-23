@@ -26,8 +26,8 @@ const renderizarLista = () => {
 
     const favorito = document.createElement("img");
     favorito.src = filmesFavoritos.some((fav) => fav.id === filme.id)
-      ? "/lista-filmes/img/heart-fill.svg"
-      : "/lista-filmes/img/heart.svg";
+      ? "./img/heart-fill.svg"
+      : "img/heart.svg";
     favorito.style.cursor = "pointer";
     favorito.addEventListener("click", (e) => {
       favoritoClicado(e, filme);
@@ -51,7 +51,7 @@ btn1.addEventListener("click", () => {
 const favoritoClicado = (eventoDeClique, objetoFilme) => {
   const favoriteState = {
     favorited: "img/heart-fill.svg",
-    notFavorited: "img/heart.svg'",
+    notFavorited: "img/heart.svg",
   };
   if (eventoDeClique.target.src.includes(favoriteState.notFavorited)) {
     eventoDeClique.target.src = favoriteState.favorited;
