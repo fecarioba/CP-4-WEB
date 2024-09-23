@@ -50,8 +50,8 @@ btn1.addEventListener("click", () => {
 
 const favoritoClicado = (eventoDeClique, objetoFilme) => {
   const favoriteState = {
-    favorited: "/lista-filmes/img/heart=fill.svg",
-    notFavorited: "/lista-filmes/img/heart.svg",
+    favorited: "img/heart-fill.svg",
+    notFavorited: "img/heart.svg'",
   };
   if (eventoDeClique.target.src.includes(favoriteState.notFavorited)) {
     eventoDeClique.target.src = favoriteState.favorited;
